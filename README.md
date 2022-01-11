@@ -27,7 +27,7 @@ election audit results: do i need to add code here?
 - The county results were:
   - Jefferson: 38,855 votes (10.5%)
   - Denver: 306,055 votes (82.8%)
-  - Arapahoe: 24,801 voges (6.7%)
+  - Arapahoe: 24,801 votes (6.7%)
 - The largest county turnout was Denver county with 306,055 votes
 - The candidates were:
   - Charles Casper Stockham
@@ -44,6 +44,9 @@ The script can be used in future elections with some minor changes.
 ```
 Give at least two examples of how this script can be modified to be used for other elections.
 ```
+The script can be refactored to calculate the % of votes each candidate got in each county.
+
+The script can be modified to 
 ## Challenge overview
 
 
