@@ -35,6 +35,7 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
             #add to vote total
         candidate_votes[candidate_name] += 1
+#save results to text file
 with open(file_to_save, "w") as txt_file:
     election_results = (
             f"\nElection Results\n"
@@ -42,25 +43,36 @@ with open(file_to_save, "w") as txt_file:
             f"TotalVotes: {total_votes:,}\n"
             f"---------------------\n")
     print(election_results, end="")
+    #write the total election results to the file
     txt_file.write(election_results)
     for candidate_name in candidate_votes:
+        #get vote count and vote percentage
         votes = candidate_votes[candidate_name]
         vote_percentage = float(votes)/float(total_votes) *100
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
         #print(f"{candidate_name}: received {vote_percentage:.1f}% ({votes:,})\n")
+        #print each candidate's votor count and percentage
+        print(candidate_results)
+        #save candidate results to txt file
+        txt_file.write(candidate_results)
+        #determine winner
         if (votes > winning_count) and (vote_percentage > winning_percentage):
             #set winning count = votes and winning percent = percent
             winning_count = votes
             winning_percentage = vote_percentage
             winning_candidate = candidate_name
-
-    print(f"{winning_candidate} won with {winning_count} votes, representing {winning_percentage:.1f}% of the votes.")
+      
+##----------------- How do i get a line at the end like i am supposed to??????       
     winning_candidate_summary = (
             f"---------------------------\n"
             f"Winner: {winning_candidate}\n"
             f"Winning vote count: {winning_count:,}\n"
             f"Winning Percentage: {winning_percentage:.1f}%\n"
-            f"---------------------------\n")
-    #print(winning_candidate_summary)
+            f"---------------------------\n")    
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
+    
 
 
     
