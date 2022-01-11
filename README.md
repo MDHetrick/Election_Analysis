@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Overview
-A Colorado board of elections employee has given you the following tasks to complete the election audit of a recent local congressional election.
+The goal of this project is to perform on audit on a recent local Colorado election.
 
 1. Calculate total number of votes cast.
 2. Get a complete list of candidates who received votes
@@ -14,7 +14,11 @@ A Colorado board of elections employee has given you the following tasks to comp
 - Software: Python 3.8.3, Visual Studio Code 1.63.2
 
 ## Summary
-The analysis of the election show that:
+```
+election audit results: do i need to add code here?
+```
+
+### The analysis of the election show that:
 - There were 369,711 votes cast in the election
 - Three counties were represented in this election:
   - Jefferson
@@ -35,6 +39,11 @@ The analysis of the election show that:
   - Raymon Anthony Doane received 3.1% of the vote and 11,606 votes.
 - The winner of the election was:
   - Diana DeGette who received 73.8% of the vote and 272,892 votes.
-
+### Future Elections:
+The script can be used in future elections with some minor changes.
+```
+Give at least two examples of how this script can be modified to be used for other elections.
+```
 ## Challenge overview
+
 
