@@ -32,13 +32,11 @@ winning_percentage = 0
 
 # 2: Track the largest county and county voter turnout.
 winning_county_name = ""
-#?????????? county_turnout ---> idk if this is right 
+ 
 winning_county_turnout = 0
 
 # Read the csv and convert it into a list of dictionaries
-#-------------------------------
-# changed from election_data to election_results
-#-------------------------------
+
 with open(file_to_load) as election_data:
     reader = csv.reader(election_data)
 
