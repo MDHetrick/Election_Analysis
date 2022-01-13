@@ -40,13 +40,13 @@ election audit results: do i need to add code here?
 - The winner of the election was:
   - Diana DeGette who received 73.8% of the vote and 272,892 votes.
 ### Future Elections:
-The script can be used in future elections with some minor changes.
+The script could be used in future elections with some minor changes.
 ```
 Give at least two examples of how this script can be modified to be used for other elections.
 ```
-The script can be refactored to calculate the % of votes each candidate got in each county.
+If more data is gathered (such as city), this variable can be added to look at the regional data in a more granular way.
+The script can also be modified to look at how many votes were given to each candidate in each county.
 
-The script can be modified to 
 ## Challenge overview
 
 
