@@ -45,6 +45,18 @@ The script could be used in future elections with some minor changes.
 Give at least two examples of how this script can be modified to be used for other elections.
 ```
 If more data is gathered (such as city), this variable can be added to look at the regional data in a more granular way.
+
+The script can be modified to give us the county with the lowest turnout as well. We can acces the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
+
+```
+    losing_county_summary = (
+        f"\n-------------------------\n"
+        f"Smallest County Turnout:\n {min(county_votes, key=county_votes.get)} ({county_votes[min(county_votes, key=county_votes.get)]:,} votes)\n"
+        f"---------------------------\n")
+    print(losing_county_summary)
+
+```
+
 The script can also be modified to look at how many votes were given to each candidate in each county.
 
 ## Challenge overview
