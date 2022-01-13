@@ -23,6 +23,7 @@ candidate_votes = {}
 # 1: Create a county list and county votes dictionary.
 #create county list -> uses []
 county_list = []
+county_votes_list = []
 #create county votes dictionary -> {}
 county_votes = {}
 # Track the winning candidate, vote count and percentage
@@ -114,10 +115,19 @@ with open(file_to_save, "w") as txt_file:
     # 7: Print the county with the largest turnout to the terminal.
     winning_county_summary = (
         f"\n-------------------------\n"
-        f"Largest County Turnout: {winning_county_name} ({winning_county_turnout:,} votes)\n"
+        f"Largest County Turnout: \n {winning_county_name} ({winning_county_turnout:,} votes)\n"
         f"-------------------------\n"
         )
     print(winning_county_summary)
+
+# ------------>
+    losing_county_summary = (
+        f"\n-------------------------\n"
+        f"Smallest County Turnout:\n {min(county_votes, key=county_votes.get)} ({county_votes[min(county_votes, key=county_votes.get)]:,} votes)\n"
+        f"---------------------------\n")
+    print(losing_county_summary)
+
+
     # 8: Save the county with the largest turnout to a text file.
     txt_file.write(winning_county_summary)
 
@@ -154,4 +164,4 @@ with open(file_to_save, "w") as txt_file:
     # Save the winning candidate's name to the text file
     txt_file.write(winning_candidate_summary)
 
-print(county_votes)
+
