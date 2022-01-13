@@ -46,7 +46,7 @@ Give at least two examples of how this script can be modified to be used for oth
 ```
 If more data is gathered (such as city), this variable can be added to look at the regional data in a more granular way.
 
-The script can be modified to give us the county with the lowest turnout as well. We can acces the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
+The script can be modified to give us the county with the lowest turnout as well. We can access the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
 
 ```
     losing_county_summary = (
