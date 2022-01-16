@@ -14,10 +14,6 @@ The goal of this project is to perform on audit on a recent local Colorado elect
 - Software: Python 3.8.3, Visual Studio Code 1.63.2
 
 ## Summary
-```
-election audit results: do i need to add code here?
-```
-
 ### The analysis of the election show that:
 - There were 369,711 votes cast in the election
 - Three counties were represented in this election:
@@ -112,7 +108,4 @@ print(Ray_Dict)
 
 As programmed, this would require some editing to incorporate all the relevant information.
 
-
-
-## Challenge overview
 
