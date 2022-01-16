@@ -41,10 +41,6 @@ election audit results: do i need to add code here?
   - Diana DeGette who received 73.8% of the vote and 272,892 votes.
 ### Future Elections:
 The script could be used in future elections with some minor changes.
-```
-Give at least two examples of how this script can be modified to be used for other elections.
-```
-If more data is gathered (such as city), this variable can be added to look at the regional data in a more granular way.
 
 The script can be modified to give us the county with the lowest turnout as well. We can access the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
 
@@ -57,8 +53,66 @@ The script can be modified to give us the county with the lowest turnout as well
 
 ```
 
-The script can also be modified to look at how many votes were given to each candidate in each county.
+The script can also be modified to look at how many votes were given to each candidate in each county. First, dictionaries can be added for each candidate that list each county.
+
+```
+Diana_Dict = {
+    "Denver": 0,
+    "Arapahoe": 0,
+    "Jefferson": 0
+}
+Ray_Dict = {
+    "Denver": 0,
+    "Arapahoe": 0,
+    "Jefferson": 0
+}
+Charles_dict = {
+    "Denver": 0,
+    "Arapahoe": 0,
+    "Jefferson": 0
+}
+```
+Then, we can iterate through the rows and count the votes each candidate got in each county.
+
+```
+with open(file_to_load) as election_data:
+    reader = csv.reader(election_data)
+
+    # Read the header
+    header = next(reader)
+
+    # For each row in the CSV file.
+    for row in reader:
+
+        # Add to the total vote count
+        total_votes = total_votes + 1
+
+        # Get the candidate name from each row.
+        candidate_name = row[2]
+
+        # 3: Extract the county name from each row.
+        county_name = row[1]
+
+        if candidate_name == "Diana DeGette":
+            Diana_Dict[county_name] += 1
+        elif candidate_name == "Raymon Anthony Doane":
+            Ray_Dict[county_name] += 1
+        elif candidate_name == "Charles Casper Stockham":
+            Charles_dict[county_name] += 1
+
+```
+
+Then, we can format, if desired, or simply print out the votes each candidate got in each county.
+
+```
+print(Diana_Dict)
+print(Charles_dict)
+print(Ray_Dict)
+```
+
+As programmed, this would require some editing to incorporate all the relevant information.
+
+
 
 ## Challenge overview
-
 
