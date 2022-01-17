@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Overview
-The goal of this project is to perform an audit on a recent local Colorado election.
+The goal of this project is to perform an audit on a recent local Colorado election. This audit will look at the following deliverables:
 
 1. Calculate total number of votes cast.
 2. Get a complete list of candidates who received votes
@@ -30,11 +30,11 @@ The goal of this project is to perform an audit on a recent local Colorado elect
   - Diana DeGette
   - Raymon Anthony Doane
 - The candidate results were:
-  - Charles Casper Stockham received 23.0% of the vote and 85,213 votes.
-  - Diana DeGette received 73.8% of the vote and 272,892 votes.
-  - Raymon Anthony Doane received 3.1% of the vote and 11,606 votes.
+  - Charles Casper Stockham received 23.0% of the vote with 85,213 votes.
+  - Diana DeGette received 73.8% of the vote with 272,892 votes.
+  - Raymon Anthony Doane received 3.1% of the vote with 11,606 votes.
 - The winner of the election was:
-  - Diana DeGette who received 73.8% of the vote and 272,892 votes.
+  - Diana DeGette who received 73.8% of the vote with 272,892 votes.
 ### Future Elections:
 The script could be used in future elections with some minor changes.
 
