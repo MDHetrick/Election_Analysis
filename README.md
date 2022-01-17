@@ -1,4 +1,4 @@
-# Election_Analysis
+# Colorado Election Analysis
 
 ## Project Overview
 The goal of this project is to perform an audit on a recent local Colorado election. This audit will look at the following deliverables:
