@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Overview
-The goal of this project is to perform on audit on a recent local Colorado election.
+The goal of this project is to perform an audit on a recent local Colorado election.
 
 1. Calculate total number of votes cast.
 2. Get a complete list of candidates who received votes
@@ -68,7 +68,7 @@ Charles_dict = {
     "Jefferson": 0
 }
 ```
-Then, we can iterate through the rows and count the votes each candidate got in each county.
+Then, we can iterate through the rows and count the votes each candidate got in each county. This can be placed within the current code.
 
 ```
 with open(file_to_load) as election_data:
