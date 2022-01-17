@@ -38,7 +38,7 @@ The goal of this project is to perform an audit on a recent local Colorado elect
 ### Future Elections:
 The script could be used in future elections with some minor changes.
 
-The script can be modified to give us the county with the lowest turnout as well. We can access the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
+The script can be modified to give us the county with the lowest turnout. We can access the county_votes dictionary and pull out the lowest turnout. The winner could also be determined this way, if we change min to max in both places in the middle line.
 
 ```
     losing_county_summary = (
@@ -98,14 +98,41 @@ with open(file_to_load) as election_data:
 
 ```
 
-Then, we can format, if desired, or simply print out the votes each candidate got in each county.
+Then the results can be formatted and printed.
 
 ```
-print(Diana_Dict)
-print(Charles_dict)
-print(Ray_Dict)
+Diana_votes_county = (
+    f'\n-----------------------------\n'
+    f'Diana DeGette\n' 
+    f'Arapahoe County: {Diana_Dict["Arapahoe"]:,} votes\n'
+    f'Jefferson County: {Diana_Dict["Jefferson"]:,} votes\n'
+    f'Denver County: {Diana_Dict["Denver"]:,} votes'
+    f'\n-----------------------------\n'
+)
+
+Charles_votes_county = (
+    f'\n-----------------------------\n' 
+    f'Charles Casper Stockham\n' 
+    f'Arapahoe County: {Charles_dict["Arapahoe"]:,} votes\n'
+    f'Jefferson County: {Charles_dict["Jefferson"]:,} votes\n'
+    f'Denver County: {Charles_dict["Denver"]:,} votes'
+    f'\n-----------------------------\n'
+)
+
+Ray_votes_county = (
+    f'\n-----------------------------\n'
+    f'Raymon Anthony Doane \n' 
+    f'Arapahoe County: {Ray_Dict["Arapahoe"]:,} votes\n'
+    f'Jefferson County: {Ray_Dict["Jefferson"]:,} votes\n'
+    f'Denver County: {Ray_Dict["Denver"]:,} votes'
+    f'\n-----------------------------\n'
+)
+
+print(Diana_votes_county)
+print(Ray_votes_county)
+print(Charles_votes_county)
 ```
 
-As programmed, this would require some editing to incorporate all the relevant information.
+For this to be relevant to future elections, it would require some editing to incorporate all the relevant information such as candidate names and county names. If this breakdown is desired, the initial code can be run to obtain this information, and then the extended code can be modified and run to provide the more granular information.
 
 
